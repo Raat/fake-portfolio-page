@@ -33,6 +33,7 @@
     "react-intl": "^2.3.0",
     "react-intl-redux": "^0.6.0",
     "react-redux": "^5.0.6",
+    "react-slick": "^0.15.4",
     "react-styleguidist": "^6.0.23",
     "redux": "^3.7.2",
     "reselect": "^3.0.1",

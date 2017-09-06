@@ -20,7 +20,7 @@ global.specs = specs;
 global.describe = describe;
 global.it = it;
 
-const req = require.context('../app/', true, /.stories.js$/)
+const req = require.context('../src/', true, /.stories.js$/)
 
 function loadStories() {
   req.keys().forEach((filename) => req(filename))
