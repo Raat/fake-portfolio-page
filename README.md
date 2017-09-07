@@ -1,16 +1,11 @@
 
 ###### Installation
 ```
+git clone git@github.com:Raat/fake-portfolio-page.git
 npm i
-npm run storybook
-```
-
-###### start webpack-dev-server
-```
 npm run start
 ```
-
-###### run tests
+The webpack-dev-server is now running go to:
 ```
-npm run mocha
+http://localhost:9000/
 ```
