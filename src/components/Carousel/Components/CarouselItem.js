@@ -3,10 +3,14 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Overlay from './Overlay';
 
-const Container = styled.div`width: 294px;`;
+const Container = styled.div`
+  width: 295px;
+  margin: 20px;
+  hegiht: 100%;
+`;
 
 const HoverWrapper = styled.div`
-  width: 294px;
+  width: 295px;
   height: 422px;
   position: relative;
   transition: 0.8s ease;
@@ -16,7 +20,11 @@ const HoverWrapper = styled.div`
   }
 `;
 
-const Image = styled.img`position: absolute;`;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+`;
 
 const H3 = styled.h3`font-size: 18px;`;
 

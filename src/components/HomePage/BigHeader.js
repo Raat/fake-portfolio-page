@@ -3,25 +3,36 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-bootstrap';
 
-const HeaderImg = styled.img`
+const HeaderImg = styled.div`
   width: 66%;
   max-width: 900px;
+  min-height: 480px;
   height: auto;
   position: absolute;
-  left: 0px;
+  left: -15px;
   top: 0px;
+  background-image: url(${({ desktop }) => desktop});
+  @media (max-width: 700px) {
+    background-image: url(${({ mobile }) => mobile});
+    background-repeat: no-repeat;
+    background-position: right;
+    right: -15px;
+    width: 100%;
+    left: auto;
+  }
 `;
 
-const Container = styled(Row)`
-  height: 826px;
+const Wrapper = styled.div`
+  height: 750px;
   width: 100%;
+  margin-bottom: 20px;
   left: 0px;
   right: 0px;
   position: relative;
 `;
 
 const Heading = styled.h1`
-  margin-top: 70px;
+  margin-top: 150px;
   text-align: right;
   color: #f4a0a0;
   font-size: 250px;
@@ -31,9 +42,7 @@ const Heading = styled.h1`
   }
   @media (max-width: 700px) {
     font-size: 100px;
-  }
-  @media (max-width: 400px) {
-    font-size: 50px;
+    margin-bottom: 250px;
   }
 `;
 
@@ -46,25 +55,26 @@ const P = styled.p`font-size: 16px;`;
  * @param {string} title     title of the page
  */
 
-const BigHeader = ({ content, headerImg, title }) => (
-  <Container>
-    <HeaderImg src={headerImg} />
+const BigHeader = ({ content, headerImgDesktop, headerImgMobile, title }) => (
+  <Wrapper>
+    <HeaderImg desktop={headerImgDesktop} mobile={headerImgMobile} />
     <Row>
-      <Col md={11} mdOffset={1}>
+      <Col md={10} mdOffset={1}>
         <Heading>{title}</Heading>
       </Col>
     </Row>
     <Row>
-      <Col md={3} mdOffset={8} className={'pull-right'}>
+      <Col md={3} mdOffset={8}>
         <P>{content}</P>
       </Col>
     </Row>
-  </Container>
+  </Wrapper>
 );
 
 BigHeader.propTypes = {
   content: PropTypes.string.isRequired,
-  headerImg: PropTypes.string.isRequired,
+  headerImgDesktop: PropTypes.string.isRequired,
+  headerImgMobile: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
 

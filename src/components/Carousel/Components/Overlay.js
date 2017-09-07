@@ -13,6 +13,7 @@ const Shadow = styled.div`
 
 const Background = styled.div`
   height: 100%;
+  cursor: pointer;
   width: 100%;
   position: absolute;
   z-index: 1;
