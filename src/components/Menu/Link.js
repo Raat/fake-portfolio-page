@@ -41,7 +41,8 @@ const ActiveLine = styled.div`
   opacity: 0;
   position: relative;
   top: -20px;
-  width: 100% @media (min-width: 575px) {
+  width: 100%;
+  @media (min-width: 575px) {
     width: 20px;
     margin: auto;
     position: static;
