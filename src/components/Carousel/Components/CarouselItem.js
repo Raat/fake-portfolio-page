@@ -1,21 +1,47 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import Overlay from './Overlay';
 
-const Container = Styled.div`
-  width:294px;
+const Container = styled.div`width: 294px;`;
+
+const HoverWrapper = styled.div`
+  width: 294px;
+  height: 422px;
+  position: relative;
+  transition: 0.8s ease;
+  top: 0px;
+  :hover {
+    top: -20px;
+  }
 `;
 
-const Image = Styled.img`
-  width:100%;
-  height:422px;
-`;
+const Image = styled.img`position: absolute;`;
 
-const CarouselItem = () => (
+const H3 = styled.h3`font-size: 18px;`;
+
+const HoverItem = ({ img }) => (
+  <HoverWrapper>
+    <Image src={img} />
+    <Overlay text="More info" />
+  </HoverWrapper>
+);
+HoverItem.propTypes = {
+  img: PropTypes.string.isRequired,
+};
+
+const CarouselItem = ({ name, img, description }) => (
   <Container>
-    <Image src={'./static/images/eef.jpg'} />
-    <h5>Eefje de Visser</h5>
-    <p>Zonder tegenwind kun je niet gaan vliegen</p>
+    <HoverItem img={img} />
+    <H3>{name}</H3>
+    <p>{description}</p>
   </Container>
 );
+
+CarouselItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default CarouselItem;
