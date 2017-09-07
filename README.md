@@ -1,5 +1,5 @@
 
-###### Installation
+## Installation
 ```
 git clone git@github.com:Raat/fake-portfolio-page.git
 npm i
