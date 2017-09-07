@@ -7,15 +7,15 @@ const HeaderImg = styled.div`
   width: 66%;
   max-width: 900px;
   min-height: 480px;
-  height: auto;
+  height: 100%;
   position: absolute;
   left: -15px;
   top: 0px;
+  background-repeat: no-repeat;
   background-image: url(${({ desktop }) => desktop});
   @media (max-width: 700px) {
     background-image: url(${({ mobile }) => mobile});
-    background-repeat: no-repeat;
-    background-position: right;
+    background-position: right top;
     right: -15px;
     width: 100%;
     left: auto;
@@ -23,12 +23,15 @@ const HeaderImg = styled.div`
 `;
 
 const Wrapper = styled.div`
-  height: 750px;
+  height: 600px;
   width: 100%;
   margin-bottom: 20px;
   left: 0px;
   right: 0px;
   position: relative;
+  @media (max-width: 500px) {
+    height: 650px;
+  }
 `;
 
 const Heading = styled.h1`

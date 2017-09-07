@@ -6,6 +6,7 @@ export default {
     'The xx is een driekoppige Engelse indieband, gevormd in Wandsworth, Londen in 2005. De drie brachten hun debuutalbum, xx, uit in augustus 2009. Het kwam op de eerste plaats van de "best of 2009"-lijst van The Guardian en op de tweede op die van NME.',
   headerImgDesktop: '/static/images/header-image.jpg',
   headerImgMobile: '/static/images/header-image-mobile.jpg',
+  postType: 'Upcoming Artists',
   posts: [
     {
       id: 1,
