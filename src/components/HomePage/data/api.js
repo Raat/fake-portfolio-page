@@ -1,4 +1,4 @@
-const imgUrl = '/static/images'; // igno
+const imgUrl = '/static/images';
 
 export default {
   title: 'The XX',

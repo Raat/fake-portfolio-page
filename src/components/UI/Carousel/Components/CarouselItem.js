@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { H3 } from 'UI/Text';
 import Overlay from './Overlay';
 
 const Container = styled.div`
@@ -26,8 +27,6 @@ const Image = styled.img`
   position: absolute;
 `;
 
-const H3 = styled.h3`font-size: 18px;`;
-
 const HoverItem = ({ img }) => (
   <HoverWrapper>
     <Image src={img} />
@@ -47,8 +46,17 @@ const CarouselItem = ({ name, img, description }) => (
 );
 
 CarouselItem.propTypes = {
+  /**
+   * The name to display in the title
+   */
   name: PropTypes.string.isRequired,
+  /**
+   * The url for the image
+   */
   img: PropTypes.string.isRequired,
+  /**
+   * The description to display under the name
+   */
   description: PropTypes.string.isRequired,
 };
 

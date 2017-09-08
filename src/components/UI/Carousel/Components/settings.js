@@ -1,12 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Slider from 'react-slick';
-
 /**
   setting for the slider
  */
 
-const settings = {
+export default {
   dots: false,
   infinite: false,
   speed: 500,
@@ -42,19 +38,3 @@ const settings = {
     },
   ],
 };
-/**
- * CarouselContainer
- * @param {element} children CarouselItem
-*/
-
-const CarouselContainer = ({ children }) => <Slider {...settings}>{children}</Slider>;
-
-CarouselContainer.propTypes = {
-  /**
- * List of CarouselItems
- * @type {node}
- */
-  children: PropTypes.node.isRequired,
-};
-
-export default CarouselContainer;

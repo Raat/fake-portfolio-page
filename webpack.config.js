@@ -13,9 +13,10 @@ module.exports = {
     port: 9000,
   },
   resolve: {
-    modules: [path.resolve(__dirname, './app/'), path.resolve(__dirname, './node_modules')],
+    modules: [path.resolve(__dirname, './src'), path.resolve(__dirname, './node_modules')],
     alias: {
-      constants: path.resolve(__dirname, './app/constants'),
+      UI: path.resolve(__dirname, './src/components/UI'),
+      Theme: path.resolve(__dirname, './src/components/Theme'),
     },
     extensions: ['.js', '.jsx'],
   },

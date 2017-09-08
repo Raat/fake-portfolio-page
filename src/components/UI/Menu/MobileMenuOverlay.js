@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Link from './Link';
 
 const Overlay = styled.div`
@@ -16,7 +17,7 @@ const MenuBackground = styled.div`
   transform: rotate(-7deg);
   position: absolute;
   top: -10%;
-  right: -200px;
+  right: -150px;
 `;
 
 const Wrapper = styled.div`
@@ -41,9 +42,9 @@ const MenuWrapper = styled.div`
   }
 `;
 
-const MobileMenuOverlay = () => (
+const MobileMenuOverlay = ({ close }) => (
   <Wrapper>
-    <Overlay />
+    <Overlay onClick={close} />
     <MenuBackground />
     <MenuWrapper>
       <Link href="#">Events</Link>
@@ -54,6 +55,6 @@ const MobileMenuOverlay = () => (
   </Wrapper>
 );
 
-MobileMenuOverlay.propTypes = {};
+MobileMenuOverlay.propTypes = { close: PropTypes.func.isRequired };
 
 export default MobileMenuOverlay;

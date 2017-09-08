@@ -28,9 +28,11 @@ class MobileMenu extends React.Component {
   }
   render() {
     return (
-      <div onClick={this.onClick}>
-        <Img src="/static/images/mobile-menu-icon.png" />
-        {this.state.showMenu ? <MobileMenuOverlay showMenu={this.state.showMenu} /> : null}
+      <div>
+        <Img src="/static/images/mobile-menu-icon.png" onClick={this.onClick} />
+        {this.state.showMenu ? (
+          <MobileMenuOverlay showMenu={this.state.showMenu} close={this.onClick} />
+        ) : null}
       </div>
     );
   }
