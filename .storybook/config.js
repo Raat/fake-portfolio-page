@@ -1,7 +1,8 @@
 import { configure, addDecorator} from '@storybook/react';
 import { withInfo, setDefaults } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
-import ThemeContainer from 'Theme/ThemeContainer'
+import ThemeContainer from 'Theme/ThemeContainer';
+
 // addon-info
 setDefaults({
   header: false, // Toggles display of header with component name and description
